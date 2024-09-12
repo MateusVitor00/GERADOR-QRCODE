@@ -1,20 +1,12 @@
 import prompt from "prompt";
-import mainPrompt from "./prompt/prompt-main.js"
-import chalk from "chalk";
-import createQrCode from "./services/qr-code/create.js";
+import qrCodePrompt from "./prompt/prompt-qrcode.js";
+import createQrCode from "./services/qr-code/createQrCode.js";
+
 
 async function main(){
-    prompt.get(mainPrompt, async (err, choose) =>{
-        if(choose.select == 1){
-            console.log(chalk.blue.bold("\nEscolheu QRCODE"));
-            createQrCode()
-
-        }if(choose.select ==  2) {
-            console.log(chalk.blueBright.bold("\nEscolheu Password"));
-        }
-    });
+    prompt.get(qrCodePrompt,createQrCode)
 
     prompt.start()
-}
+};
 
 main()
