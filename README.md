@@ -1,7 +1,7 @@
 <h2 align="center">
   Gerador de QRCode<br/>
   <div align="center">
-  <img alt="Preview" src= /captura.img>
+  <img alt="Preview" src= /Captura>
 </div>
 
 Você precisará do `node.js` e do `git` instalados globalmente em sua máquina.
